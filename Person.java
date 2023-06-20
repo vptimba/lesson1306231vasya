@@ -1,14 +1,25 @@
 public class Person {
     String name;
     String race;
+    Integer age;
 
-    Person() {
-        name = "Pedik";
-        race = "negr";
+
+
+    public Person(String name, String race, Integer age) {
+        this.name = name;
+        this.race = race;
+        this.age = age;
+    }
+    public Person() {
 
     }
 
+    @Override
     public String toString() {
-        return "name = " + name + "; race = " + race;
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", race='" + race + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

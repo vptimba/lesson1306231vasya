@@ -11,7 +11,7 @@ public class Main {
         System.out.println("введите текст");
         String sex = reader.readLine();
         printMyVariable(5, sex);
-        sex = sex + sex + "s negrom";
+        sex = sex + sex + " s negrom";
         System.out.println(sex);
 
         int myFirstVariable = 1;
