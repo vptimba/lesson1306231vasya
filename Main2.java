@@ -31,25 +31,17 @@ public class Main2 {
     }
 
     public static boolean hasAccessRights(Person human) {
-        boolean hasAccessByAge = false;
-        if (human.age >= 18) {
-            hasAccessByAge = true;
-        } else {
-            hasAccessByAge = false;
-        }
-        boolean hasAccessByRace = false;
-        if (human.race.equals("white") || human.race.equals("black") || human.race.equals("белый") || human.race.equals("черный") || human.race.equals("чёрный") || human.race.equals("negr") || human.race.equals("негр")) {
-            hasAccessByRace = true;
-        } else {
-            hasAccessByRace = false;
-        }
-        return false;
+        boolean hasAccessByAge = human.age >= 18;
+        boolean hasAccessByRace = human.race.equals("white") || human.race.equals("european") || human.race.equals("белый") || human.race.equals("европеоид")
+                || human.race.equals("бледнолицый") || human.race.equals("whites") || human.race.equals("вайт") || human.race.equals("beliy") || human.race.equals("belie") || human.race.equals("европеец")
+                || human.race.equals("снежок") || human.race.equals("снежинка") || human.race.equals("snowy");
+        return hasAccessByAge && hasAccessByRace;
 
     }
 
     public static int readInt(BufferedReader reader) throws IOException {
         String inputText = reader.readLine();
-        Integer inputIntenger = 0;
+        int inputIntenger = 0;
         try {
             inputIntenger = Integer.parseInt(inputText);
         } catch (NumberFormatException nfe) {
