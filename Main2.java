@@ -17,7 +17,7 @@ public class Main2 {
                 new InputStreamReader(System.in));
         System.out.println("введите имя");
         String name = reader.readLine();
-        System.out.println("введите расу");
+        System.out.println("введите расу ");
         String race = reader.readLine();
         System.out.println("введите возраст (ТОЛЬКО ЦИФРАМИ!!!)");
         Integer age = readInt(reader);
@@ -31,13 +31,20 @@ public class Main2 {
     }
 
     public static boolean hasAccessRights(Person human) {
-        boolean result = false;
+        boolean hasAccessByAge = false;
         if (human.age >= 18) {
-            result = true;
+            hasAccessByAge = true;
         } else {
-            result = false;
+            hasAccessByAge = false;
         }
-        return result;
+        boolean hasAccessByRace = false;
+        if (human.race.equals("white") || human.race.equals("black") || human.race.equals("белый") || human.race.equals("черный") || human.race.equals("чёрный") || human.race.equals("negr") || human.race.equals("негр")) {
+            hasAccessByRace = true;
+        } else {
+            hasAccessByRace = false;
+        }
+        return false;
+
     }
 
     public static int readInt(BufferedReader reader) throws IOException {
