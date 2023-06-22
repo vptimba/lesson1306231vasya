@@ -32,10 +32,14 @@ public class Main2 {
 
     public static boolean hasAccessRights(Person human) {
         boolean hasAccessByAge = human.age >= 18;
-        boolean hasAccessByRace = human.race.equals("white") || human.race.equals("european") || human.race.equals("белый") || human.race.equals("европеоид")
-                || human.race.equals("бледнолицый") || human.race.equals("whites") || human.race.equals("вайт") || human.race.equals("beliy") || human.race.equals("belie") || human.race.equals("европеец")
+        boolean hasAccessByRace = human.race.equals("white") || human.race.equals("european") || human.race.equals("белый")
+                || human.race.equals("европеоид") || human.race.equals("бледнолицый") || human.race.equals("whites") || human.race.equals("вайт")
+                || human.race.equals("beliy") || human.race.equals("belie") || human.race.equals("европеец")
                 || human.race.equals("снежок") || human.race.equals("снежинка") || human.race.equals("snowy");
-        return hasAccessByAge && hasAccessByRace;
+        boolean hasAccessByName = !(human.name.toLowerCase().contains("r") || human.name.toLowerCase().contains("t")
+               || human.name.toLowerCase().contains("р") || human.name.toLowerCase().contains("т") || human.name.toLowerCase().contains("к"));
+        return hasAccessByAge && hasAccessByRace && hasAccessByName;
+
 
     }
 
