@@ -1,0 +1,27 @@
+class IfDemo {
+  public static void main(String args[])  {
+    int a, b, c;
+    a = 2;
+    b = 3;
+
+    if(a < b) System.out.println("a is less than b");
+    // следующая строка не должна выводиться
+    if(а == b) System.out.println("you won't see this");
+
+    System.out.println();
+
+    с = a - b; // переменная с содержит значение -1
+
+    System.out.println("с contains -Iм);
+    if(с >= 0) System.out.println("с is non-negative");
+    if(c < 0) System.out.println("c is negative");
+
+    System.out.println();
+
+    с = b - a; // переменная с теперь содержит значение 1
+
+    System.out.println("с contains 1");
+    if(с >= 0) System.out.println("с is non-negative");
+    if(c < 0) System.out.println("c is negative");
+  }
+}
